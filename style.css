@@ -1,0 +1,111 @@
+/* تنسيقات عامة */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 50px 20px;
+}
+
+/* القسم العلوي */
+.section-one {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.section-one h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: #4c4e61;
+    line-height: 1.2;
+}
+
+.section-one h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #4c4e61;
+    margin-top: -20px;
+}
+
+.section-one p {
+    color: hsl(212, 6%, 44%);
+    line-height: 1.6;
+}
+
+/* القسم السفلي - تخطيط البطاقات */
+.cards-container {
+    display: flex; /* تفعيل Flexbox */
+    justify-content: center; /* توسيط العناصر أفقيا */
+    align-items: center; /* توسيط العناصر رأسيا */
+    flex-wrap: nowrap; /*  عدم السماح للعناصر بالنزول إلى سطر جديد */
+    gap: 30px; /* المسافة بين البطاقات */
+    max-width: 1100px; /* عرض الحاوية */
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    text-align: left;
+    max-width: 300px;
+    margin: 10px 0; /* مسافة إضافية للبطاقات */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #4c4e61;
+    margin: 0 0 10px;
+}
+
+.card p {
+    color: #a3a5ae;
+    margin: 0 0 40px;
+}
+
+.card img {
+    display: block;
+    margin-left: auto; /* دفع الصورة إلى اليمين */
+    width: 64px;
+    height: 64px;
+}
+
+/* تحديد لون الشريط العلوي لكل بطاقة */
+.card-supervisor {
+    border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.card-team-builder {
+    border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.card-karma {
+    border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.card-calculator {
+    border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+/* تنسيق العمود الأوسط الذي يحتوي على بطاقتين */
+.column-center {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر افقيا */
+}
+
+/* تنسيق الاستجابة على الشاشات الأصغر */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* ترتيب العناصر عموديا على الشاشات الصغيرة */
+    }
+}
